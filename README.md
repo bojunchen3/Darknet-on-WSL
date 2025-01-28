@@ -9,3 +9,11 @@ and then
 ```
 wsl --install --web-download
 ```
+finally
+```
+git clone https://github.com/bojunchen3/Darknet-on-WSL.git
+```
+and
+```
+source ./setup.sh
+```
