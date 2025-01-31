@@ -15,7 +15,7 @@ git clone https://github.com/AlexeyAB/darknet
 mv ./Darknet-on-WSL/main.py ./darknet/
 mv ./Darknet-on-WSL/coco ./darknet/
 cd darknet
-ls ./coco >> list.txt
+ls -d ./coco/* >> list.txt
 sed -i 's/GPU=0/GPU=1/' Makefile
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 1 --slave /usr/bin/g++ g++ /usr/bin/g++-12
 make
