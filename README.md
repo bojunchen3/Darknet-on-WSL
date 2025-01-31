@@ -1,7 +1,7 @@
 # Darknet-on-WSL
 Deploy YOLOv3 with Darknet on WSL and using CUDA to accelerate.
 
-Run below commands in Windows10/11 cmd.
+Run below commands in Windows 10/11 cmd.
 ```
 wsl --update
 ```
