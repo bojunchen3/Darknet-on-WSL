@@ -1,19 +1,22 @@
 # Darknet-on-WSL
 Deploy YOLOv3 with Darknet on WSL and using CUDA to accelerate.
 
-First run
+Run below command in Windows10/11 cmd
 ```
 wsl --update
 ```
-and then
 ```
-wsl --install --web-download
+wsl --install
 ```
-finally
 ```
 git clone https://github.com/bojunchen3/Darknet-on-WSL.git
 ```
-and
+change directory to Darknet-on-WSL
 ```
 source ./setup.sh
+```
+if you want to run main.py to inference multiple images in one command
+change directory to darknet and run
+```
+python3 main.py
 ```
