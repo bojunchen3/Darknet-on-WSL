@@ -20,8 +20,7 @@ change directory to darknet and run
 ```
 python3 main.py
 ```
-After downloading cudnn archive for Linux x86_64 (Tar) from Nvidia website,
-you can back to Darknet-on-WSL file and run
+After downloading cudnn archive for Linux x86_64 (Tar) from Nvidia website and put it to the same directory of Darknet-on-WSL and darknet, you can back to Darknet-on-WSL file and run
 ```
 source ./cudnn.sh
 ```
