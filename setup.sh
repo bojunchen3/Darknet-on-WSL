@@ -1,6 +1,6 @@
 cd
-sudo apt update
-sudo apt upgrade
+sudo apt -y update
+sudo apt -y upgrade
 sudo apt -y install nvidia-cuda-toolkit
 sudo apt -y install make
 git clone https://github.com/AlexeyAB/darknet
