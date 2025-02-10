@@ -1,14 +1,15 @@
 cd
-sudo tar -xvf cudnn*archive
-cd ./cudnn*archive 
-sudo cp -r ./lib/* /usr/lib/cuda/lib64/
-sudo cp -r ./include/* /usr/include/
-sudo chmod a+r /usr/include/cudnn*
-sudo chmod a+r /usr/lib/cuda/lib64/libcudnn*
-echo 'export PATH=/usr/include${PATH:+:${PATH}}' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/lib/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
-source ~/.bashrc
+#sudo tar -xvf ./cudnn*xz
+cd ./cudnn*archive
+sudo mkdir -p /usr/local/cudnn/lib64
+sudo mkdir -p /usr/local/cudnn/include
+sudo cp -r ./lib/* /usr/local/cudnn/lib64/
+sudo cp -r ./include/* /usr/local/cudnn/include/
+sudo chmod a+r /usr/local/cudnn/include/cudnn*
+sudo chmod a+r /usr/local/cudnn/lib64/libcudnn*
 cd ../darknet
 sed -i 's/CUDNN=0/CUDNN=1/' Makefile
+#sed -i 's|local/cuda/lib64|lib/cuda/lib64|/g' Makefile
+#sed -i 's|local/cuda/include/|include/|g' Makefile
 make
 ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
