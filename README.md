@@ -20,3 +20,8 @@ change directory to darknet and run
 ```
 python3 main.py
 ```
+Moreover, you can back to Darknet-on-WSL file and run
+```
+source ./cudnn.sh
+```
+to install cudnn.
